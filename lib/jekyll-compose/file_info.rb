@@ -13,7 +13,12 @@ class Jekyll::Compose::FileInfo
     <<-CONTENT.gsub /^\s+/, ''
       ---
       layout: #{params.layout}
-      title: #{params.title}
+      title:  #{params.title}
+      image:  #{params.image}
+      author: #{params.author}
+      date:   #{params.date}
+      categories: #{params.categories}  
+      tags:   #{params.tags}
       ---
     CONTENT
   end

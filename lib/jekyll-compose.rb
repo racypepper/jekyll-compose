@@ -10,6 +10,10 @@ module Jekyll
     DEFAULT_TYPE = "md"
     DEFAULT_LAYOUT = "post"
     DEFAULT_LAYOUT_PAGE = "page"
+    DEFAULT_AUTHOR = "Nobody"
+    DEFAULT_IMAGE = ""
+    DEFAULT_CATEGORIES = ""
+    DEFAULT_TAGS = ""
   end
 end
 

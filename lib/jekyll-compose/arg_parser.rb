@@ -17,6 +17,26 @@ class Jekyll::Compose::ArgParser
     layout = options["layout"] || Jekyll::Compose::DEFAULT_LAYOUT
   end
 
+  def author
+    author = options["author"] || Jekyll::Compose::DEFAULT_AUTHOR
+  end
+
+  def image
+    image = options["image"] || Jekyll::Compose::DEFAULT_IMAGE
+  end
+
+  def categories
+    categories = options["categories"] || Jekyll::Compose::DEFAULT_CATEGORIES
+  end
+
+  def tags
+    tags = options["tags"] || Jekyll::Compose::DEFAULT_TAGS
+  end
+
+  def date
+    date = options["date"] || Time.now.strftime('%Y-%m-%d %H:%M:%S')
+  end
+
   def title
     args.join ' '
   end
