@@ -17,7 +17,11 @@ module Jekyll
           ['extension', '-x EXTENSION', '--extension EXTENSION', 'Specify the file extension'],
           ['layout', '-l LAYOUT', '--layout LAYOUT', "Specify the post layout"],
           ['force', '-f', '--force', 'Overwrite a post if it already exists'],
-          ['date', '-d DATE', '--date DATE', 'Specify the post date']
+          ['date', '-d DATE', '--date DATE', 'Specify the post date'],
+          ['image', '-i IMAGE_PATH', '--image IMAGE_PATH', 'Specify the post image'],
+          ['author', '-a AUTHOR', '--author AUTHON', 'Specify the post author'],
+          ['categories', '-c CATEGORIES', '--categories CATEGORIES', 'Array of post categories'],
+          ['tags', '-t TAGS', '--tags TAGS', 'Array of post tags']
         ]
       end
 

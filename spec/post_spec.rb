@@ -41,7 +41,27 @@ RSpec.describe(Jekyll::Commands::Post) do
 
   it 'creates a new post with the specified layout' do
     capture_stdout { described_class.process(args, 'layout' => 'other-layout') }
-    expect(File.read(path)).to match(/layout: other-layout/)
+    expect(File.read(path)).to match(/layout:\s+other-layout/)
+  end
+
+  it 'creates a new post with the specified author' do
+    capture_stdout { described_class.process(args, 'author' => 'Test Author') }
+    expect(File.read(path)).to match(/author:\s+Test Author/) 
+  end
+
+  it 'creates a new post with the specified image' do
+    capture_stdout { described_class.process(args, 'image' => '\img\img.jpg') }
+    expect(File.read(path)).to match(/image:\s+\\img\\img.jpg/) 
+  end
+
+  it 'creates a new post with the specified categories' do
+    capture_stdout { described_class.process(args, 'categories' => 'test1 test2 test3') }
+    expect(File.read(path)).to match(/categories:\s+test1 test2 test3/) 
+  end
+
+  it 'creates a new post with the specified tags' do
+    capture_stdout { described_class.process(args, 'tags' => 'test1 test2 test3') }
+    expect(File.read(path)).to match(/tags:\s+test1 test2 test3/) 
   end
 
   it 'should write a helpful message when successful' do
